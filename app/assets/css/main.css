@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  --header: 52px;
+  /*--background: #15191f;
+  --ui-bg: var(--background);
+  --ui-text: white;*/
+}
