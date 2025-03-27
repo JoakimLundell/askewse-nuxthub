@@ -1,8 +1,7 @@
 import jwt from "jsonwebtoken";
 export default defineEventHandler(async (event) => {
   // Get current users id
-
-  const id = event.context.id;
+  /*const id = event.context.id;
   if (!id) return { user: {} };
 
   // Get user
@@ -16,5 +15,5 @@ export default defineEventHandler(async (event) => {
     .first();
 
   // Return
-  return { user: user };
+  return { user: user };*/
 });
