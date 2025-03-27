@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
   const db = hubDatabase();
-  await db.exec(
+  /*await db.exec(
     `CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT, trainers TEXT, token TEXT)`
   );
 
@@ -59,5 +59,5 @@ export default defineEventHandler(async (event) => {
       email: body.email,
       trainers: null,
     },
-  };
+  };*/
 });

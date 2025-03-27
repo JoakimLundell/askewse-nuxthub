@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 export default defineEventHandler(async (event) => {
   // Get user id
-  const id = event.context.id;
+  /*const id = event.context.id;
   if (id) {
     // Remove token from db
     const db = hubDatabase();
@@ -13,5 +13,5 @@ export default defineEventHandler(async (event) => {
   // Remove cookie
   setCookie(event, "askew_token", null);
   // Return
-  return { success: true };
+  return { success: true };*/
 });

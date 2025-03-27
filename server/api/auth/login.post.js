@@ -5,14 +5,9 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event);
   const db = hubDatabase();
 
-  await db.exec(
+  /*await db.exec(
     `CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT, trainers TEXT, token TEXT)`
   );
-  /*const user = db
-    .prepare("SELECT * FROM users WHERE email = ?1")
-    .bind(body.email)
-    .first();
-    */
   const user = await db
     .prepare("SELECT * FROM users WHERE email = ?1")
     .bind(body.email)
@@ -57,15 +52,5 @@ export default defineEventHandler(async (event) => {
   return {
     token: token,
     user: strippedUser,
-  };
+  };*/
 });
-
-/*function isEmpty(obj) {
-  for (const prop in obj) {
-    if (Object.hasOwn(obj, prop)) {
-      return false;
-    }
-  }
-
-  return true;
-}*/
