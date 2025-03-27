@@ -7,7 +7,9 @@ export default defineEventHandler(async (event) => {
 
   // Get user
   const db = hubDatabase();
-
+  await db.exec(
+    `CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT UNIQUE, password TEXT, trainers TEXT, token TEXT)`
+  );
   const user = await db
     .prepare(`SELECT id, name, email, trainers FROM users WHERE id = ?1`)
     .bind(id)

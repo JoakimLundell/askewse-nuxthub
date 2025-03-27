@@ -60,6 +60,4 @@ export default defineEventHandler(async (event) => {
       trainers: null,
     },
   };
-
-  return user;
 });
