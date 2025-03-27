@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <UChip
+      inset
+      color="warning"
+      :text="12"
+      size="3xl"
+    >
+      <UButton
+        icon="i-heroicons-chat-bubble-left-solid"
+        variant="ghost"
+      ></UButton>
+    </UChip>
+    <UButton
+      label="Add chatt"
+      icon="i-heroicons-plus"
+      variant="ghost"
+    ></UButton>
+  </div>
+</template>
